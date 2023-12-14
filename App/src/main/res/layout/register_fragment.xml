@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data >
+        <variable
+            name="viewmodel"
+            type="com.example.myapplication.ui.register.RegisterViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+
+
+            app:layout_constraintHeight_percent="0.20"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/spacing_extra_large"
+
+            android:textColor="@color/shade_primary_color"
+
+            android:text="Register"
+            android:textSize="@dimen/text_large"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/spacing_extra_large"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:hint="Enter your name"
+            app:helperTextTextColor="@color/main_color"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:inputType="textPersonName"
+                android:text="@{viewmodel.uiState.name}"
+                android:afterTextChanged="@{(text) -> viewmodel.onNameInputChange(text)}"
+                android:textColor="@color/shade_secondary_color"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/password_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/spacing_extra_large"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:hint="Enter your phone"
+
+            app:helperTextTextColor="@color/main_color"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:layout_constraintStart_toStartOf="@+id/user_name"
+            app:layout_constraintTop_toBottomOf="@+id/user_name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:inputType="textPersonName"
+                android:text="@{viewmodel.uiState.phone}"
+                android:afterTextChanged="@{(text) -> viewmodel.onPhoneInputChange(text)}"
+                android:textColor="@color/shade_secondary_color"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout7"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/spacing_extra_large"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:hint="Enter your Email"
+            app:helperText="@{viewmodel.uiState.emailHelperText}"
+            app:helperTextTextColor="@color/main_color"
+            app:layout_constraintTop_toBottomOf="@+id/password_layout"
+            tools:layout_editor_absoluteX="32dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:afterTextChanged="@{(text) -> viewmodel.onEmailInputChange(text)}"
+                android:inputType="textPersonName"
+                android:text="@{viewmodel.uiState.email}"
+                android:textColor="@color/shade_secondary_color" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout8"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/spacing_extra_large"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:hint="Enter your password"
+            app:helperText="@{viewmodel.uiState.passwordHelperText}"
+            app:helperTextTextColor="@color/main_color"
+            app:layout_constraintStart_toStartOf="@+id/textInputLayout7"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout7">
+
+            <com.google.android.material.textfield.TextInputEditText
+
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:afterTextChanged="@{(text) -> viewmodel.onPasswordInputChange(text)}"
+                android:inputType="textPersonName"
+                android:text="@{viewmodel.uiState.password}"
+                android:textColor="@color/shade_secondary_color" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/confirm"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginHorizontal="@dimen/spacing_large"
+
+            android:onClick="@{()->viewmodel.onClickLogIn()}"
+            android:text="Confirm"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:cornerRadius="@dimen/spacing_medium"
+            android:enabled="@{viewmodel.uiState.emailAndPasswordAreValidation}"
+            app:layout_constraintStart_toStartOf="@+id/textInputLayout8"
+            app:layout_constraintTop_toBottomOf="@+id/textInputLayout8" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/materialButton3"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginHorizontal="@dimen/spacing_large"
+            android:backgroundTint="#673AB7"
+            android:onClick="@{()->viewmodel.goToLogIn()}"
+            android:text="go To Log In"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+
+            app:cornerRadius="@dimen/spacing_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/confirm" />
+
+        <TextView
+
+            android:id="@+id/textView11"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/spacing_extra_large"
+            android:text="@{viewmodel.uiState.error}"
+            android:textColor="@color/colorDisabled"
+            android:textSize="@dimen/text_large"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/materialButton3"
+            tools:text="frddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd" />
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

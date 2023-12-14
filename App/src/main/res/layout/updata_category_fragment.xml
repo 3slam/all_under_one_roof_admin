@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+<!--        <TextView-->
+<!--            android:id="@+id/textView2"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:text="Name:"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/textInputLayout"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/textInputLayout"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintVertical_chainStyle="packed" />-->
+
+<!--        <com.google.android.material.textfield.TextInputLayout-->
+
+<!--            android:id="@+id/textInputLayout"-->
+<!--            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="32dp"-->
+<!--            android:layout_marginEnd="32dp"-->
+<!--            android:hint="Enter the name category:"-->
+<!--            app:helperTextTextColor="@color/main_color"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/confirm"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/textView2">-->
+
+<!--            <com.google.android.material.textfield.TextInputEditText-->
+
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                 android:text="@{viewmodel.uiState.categoryName}"-->
+<!--                android:inputType="textPersonName"-->
+<!--                android:afterTextChanged="@{(text) -> viewmodel.onNameChange(text)}"-->
+<!--                android:textColor="@color/shade_secondary_color" />-->
+<!--        </com.google.android.material.textfield.TextInputLayout>-->
+
+
+<!--        <TextView-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="@dimen/_5sdp"-->
+<!--            android:textColor="@color/main_color"-->
+<!--            app:layout_constraintEnd_toEndOf="@+id/textInputLayout"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/textInputLayout"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/textInputLayout"-->
+<!--            tools:text="reeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee:" />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="@dimen/_5sdp"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="@dimen/_30sdp"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/textInputLayout"-->
+<!--            app:layout_constraintEnd_toEndOf="@+id/textInputLayout"-->
+<!--            app:layout_constraintStart_toStartOf="@+id/textInputLayout"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            tools:text="Update category" />-->
+
+<!--        <com.google.android.material.button.MaterialButton-->
+<!--            android:id="@+id/confirm"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="56dp"-->
+<!--            android:onClick="@{()-> viewmodel.onCreateClick()}"-->
+<!--            android:text="Update"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:layout_margin="@dimen/_10sdp"-->
+<!--            android:textColor="@color/white"-->
+<!--            app:cornerRadius="@dimen/spacing_medium"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--        <com.google.android.material.button.MaterialButton-->
+
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="56dp"-->
+<!--            android:backgroundTint="#673AB7"-->
+<!--            android:layout_margin="@dimen/_10sdp"-->
+<!--            android:onClick="@{()-> viewmodel.onBackClick()}"-->
+<!--            android:text="Back"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:textColor="@color/white"-->
+<!--            app:cornerRadius="@dimen/spacing_medium"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+
+     </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+
